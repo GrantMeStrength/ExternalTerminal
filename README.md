@@ -38,6 +38,8 @@ When you launched the screen, the display should have cleared.
 
 Now you can go to the external terminal, and log in with your regular Mac login/password.
 
+When you are finished, enter **CTRL A** and **:** and then enter **Quit** or you'll leave the serial port open.
+
 This has worked for me on a Catalina system, using a USB to Serial dongle, but also with a Serial to BlueTooth adaptor.
 
 Note: Not all characters are displayed properly, and you will see weird things on the terminal from time to time. I am still experimenting on how to prevent this, but you might want to create a new profile based on VT100 for example in the Mac Terminal app to see if that helps.
