@@ -20,26 +20,24 @@ You should be able to find it by typing **ls /dev/cu/usb*** on the Mac's termina
 
 Enter:
 
-screen /dev/NAME_OF_YOUR_SERIAL_PORT SPEED
+**screen /dev/NAME_OF_YOUR_SERIAL_PORT SPEED**
 
 e.g.
 
-screen /dev/cu.usbserial-AC00I4ST 9600
+**screen /dev/cu.usbserial-AC00I4ST 9600**
 
 3. Start the shell:
 
-When you launched screen, the display should have cleared.
+When you launched the screen, the display should have cleared.
 
-3.1 Press CTRL and A (nothing appears to happen)
+3.1 Press **CTRL A** *(nothing appears to happen)*
 
-3.2 Press : (a colon appears at the bottom of the screen(
+3.2 Press **:** *(a colon appears at the bottom of the screen)*
 
-3.3 Enter **exec ::: /usr/libexec/getty std.9600** (you should see a login prompt)
-
+3.3 Enter **exec ::: /usr/libexec/getty std.9600** (yes, three colons. You should see a login prompt when you press enter)
 
 Now you can go to the external terminal, and log in with your regular Mac login/password.
 
 This has worked for me on a Catalina system, using a USB to Serial dongle, but also with a Serial to BlueTooth adaptor.
-
 
 Note: Not all characters are displayed properly, and you will see weird things on the terminal from time to time. I am still experimenting on how to prevent this, but you might want to create a new profile based on VT100 for example in the Mac Terminal app to see if that helps.
