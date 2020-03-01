@@ -31,7 +31,15 @@ screen /dev/cu.usbserial-AC00I4ST 9600
 When you launched screen, the display should have cleared.
 
 3.1 Press CTRL and A (nothing appears to happen)
+
 3.2 Press : (a colon appears at the bottom of the screen(
+
 3.3 Enter **exec ::: /usr/libexec/getty std.9600** (you should see a login prompt)
 
+
 Now you can go to the external terminal, and log in with your regular Mac login/password.
+
+This has worked for me on a Catalina system, using a USB to Serial dongle, but also with a Serial to BlueTooth adaptor.
+
+
+Note: Not all characters are displayed properly, and you will see weird things on the terminal from time to time. I am still experimenting on how to prevent this, but you might want to create a new profile based on VT100 for example in the Mac Terminal app to see if that helps.
