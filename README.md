@@ -14,7 +14,7 @@ This is where it gets cool: it's possible to get the Mac terminal displayed on t
 
 1. Find the name of the serial port you are using. e.g. the USB dongle. 
 
-You should be able to find it by typing **ls /dev/cu/usb*** on the Mac's terminal.
+You should be able to find it by typing **ls /dev/cu* on the Mac's terminal.
 
 2. Start a secreen session
 
