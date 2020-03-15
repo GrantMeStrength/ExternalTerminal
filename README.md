@@ -42,4 +42,11 @@ When you are finished, enter **CTRL A** and **:** and then enter **Quit** or you
 
 This has worked for me on a Catalina system, using a USB to Serial dongle, but also with a Serial to BlueTooth adaptor.
 
-Note: Not all characters are displayed properly, and you will see weird things on the terminal from time to time. I am still experimenting on how to prevent this, but you might want to create a new profile based on VT100 for example in the Mac Terminal app to see if that helps.
+## Cleaning up the display
+
+The Mac Terminal will try to send interesting characters to your remote terminal, and some of these may appear as nonsense depending on how smart the terminal is. For really old terminals, I found I had to revert to BASH from ZSH, and then set PROMPT_COMMAND to nothing.
+
+* **chsh -s /bin/bash**
+* **COMMAND_PROMPT=""**
+
+
