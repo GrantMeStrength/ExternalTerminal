@@ -47,6 +47,6 @@ This has worked for me on a Catalina system, using a USB to Serial dongle, but a
 The Mac Terminal will try to send interesting characters to your remote terminal, and some of these may appear as nonsense depending on how smart the terminal is. For really old terminals, I found I had to revert to BASH from ZSH, and then set PROMPT_COMMAND to nothing.
 
 * **chsh -s /bin/bash**
-* **COMMAND_PROMPT=""**
+* **PROMPT_COMMAND=""**
 
 
