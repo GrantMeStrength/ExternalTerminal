@@ -62,15 +62,15 @@ It is also possible to set up a getty interface at boot, although this has been 
  
 WSL is the "Windows Subsystem for Linux", a Microsoft project that allows Linux distributions to be run on Windows. The latest version is WSL2, which until recently didn't support USB devices. However, a newly published [Tabs vs. Spaces](https://youtu.be/I2jOuLU4o8E) video explains how a third party tool brings USB support to WSL2.
  
-Although USB support most useful for developers wishing to access USB hardware, such as webcams or Arduinos or other microcontrollers, it is also ideal for connecting a USB to Serial Port adaptor. This makes it possible to connect an external Terminal (for example, some vintage hardware that has a RS232 port) and then log into the Windows computer's WSL shell.
+Although USB support is most useful for developers wishing to access USB hardware, such as webcams or Arduinos or other microcontrollers, it is also ideal for connecting a USB-to-Serial Port adaptor. This makes it possible to connect an external Terminal (for example, some vintage hardware that has a RS232 port) and then log into the Windows computer's WSL shell. I make no judgement on how useful this is in practical terms.
  
 Here is how I got this working on a Windows 11 laptop.
  
-Note: Some older USB to Serial dongles use a chipset that is not supported by Windows 11 - I hit this issue with the first dongle I tried.
+Note: Some older USB-to-Serial dongles use a chipset that is not supported by Windows 11 - I hit this issue with the first dongle I tried.
  
-1. Follow the instructions at [Connecting USB devices to WSL](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/) to get **usbipd-win** installed. I used winget to install the package. Install the linux tools on the WSL side, as directed in the article.
+1. Follow the instructions at [Connecting USB devices to WSL](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/) to get **usbipd-win** installed. I used winget to install the package. Install the Linux tools on the WSL side, as directed in the article.
  
-2. Plug in the USB to Serial dongle. Use the **usbipd wsl list** command to find the ID of your dongle, and attach the USB device: for example **uspipd wsl attach --busid 1-1**. The USB device will disappear from the Windows side, and become a Linux device instead.
+2. Plug in the USB-to-Serial dongle. Use the **usbipd wsl list** command to find the ID of your dongle, and then *attach* the USB device: for example **uspipd wsl attach --busid 1-1**. The USB device will disappear from the Windows side, and become a Linux device instead.
  
 3. On the WSL side, check the dongle is now present by looking in the /dev/ directory with an **ls /dev/tty***  It will probably be called ttyUSB0.
  
